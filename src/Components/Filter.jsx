@@ -2,7 +2,10 @@ import React from "react";
 
 const Filter = () => {
   return (
-    <div className="w-full bg-secc shadow-md py-16" id="home">
+    <div
+      className="w-full bg-gradient-to-r from-primary to-bg shadow-md py-16"
+      id="home"
+    >
       <div className="max-w-[1024px] mx-auto px-2">
         <div className="space-y-5">
           <div className="text-center">

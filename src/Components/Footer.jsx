@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <div className="w-full">
       <div className="mt-[4rem] text-center">
-        <div className=" bg-gradient-to-r from-primary to-secc py-[3rem]">
-          <h1 className="font-medium text-lg text-white">
+        <div className=" bg-gradient-to-r from-primary to-secc mobile:py-[1rem]">
+          <h1 className="font-medium text-white/60">
             Erick Futura Property | 2023
           </h1>
         </div>

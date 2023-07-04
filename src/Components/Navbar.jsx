@@ -20,27 +20,43 @@ const Navbar = () => {
               onClick={() => setMenu((prev) => !prev)}
             />
             <ul
-              className={`desktop:flex desktop:gap-x-11 mobile:absolute mobile:transition-all mobile:bg-secc mobile:p-4 mobile:rounded-lg mobile:w-full mobile:left-0 mobile:shadow-lg ${
+              className={`desktop:flex desktop:gap-x-11 mobile:absolute mobile:transition-all mobile:bg-secc mobile:p-4 mobile:rounded-lg mobile:w-full mobile:left-0 mobile:shadow-lg space-y-3 ${
                 menu ? "top-[4rem]" : "top-[-15rem]"
               }`}
             >
               <li>
-                <Link className="font-medium text-lg text-black/80 mobile:text-white hover:text-primary/75">
+                <Link
+                  to={"/"}
+                  onClick={() => setMenu((prev) => !menu)}
+                  className="font-medium text-lg text-black/80 mobile:text-white hover:text-primary/75"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link className="font-medium text-lg text-black/80 mobile:text-white hover:text-primary/75">
+                <Link
+                  to={"/all-listings"}
+                  onClick={() => setMenu((prev) => !menu)}
+                  className="font-medium text-lg text-black/80 mobile:text-white hover:text-primary/75"
+                >
                   Product
                 </Link>
               </li>
               <li>
-                <Link className="font-medium text-lg text-black/80 mobile:text-white hover:text-primary/75">
+                <Link
+                  to={"/profile-me"}
+                  onClick={() => setMenu((prev) => !menu)}
+                  className="font-medium text-lg text-black/80 mobile:text-white hover:text-primary/75"
+                >
                   Profile
                 </Link>
               </li>
               <li>
-                <Link className="font-medium text-lg text-black/80 mobile:text-white hover:text-primary/75">
+                <Link
+                  to={"/contact-us"}
+                  onClick={() => setMenu((prev) => !menu)}
+                  className="font-medium text-lg text-black/80 mobile:text-white hover:text-primary/75"
+                >
                   Contact
                 </Link>
               </li>
