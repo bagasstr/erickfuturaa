@@ -3,7 +3,7 @@ import { data } from "../Data/ListingTerbaru/DataTerbaru.json";
 import { FaBath, FaBed, FaLocationDot } from "react-icons/fa6";
 import { GiResize } from "react-icons/gi";
 import { BsFillBuildingFill } from "react-icons/bs";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useSearchParams } from "react-router-dom";
 import ProductDetail from "./ProductDetail";
 
 const Product = () => {
@@ -71,11 +71,12 @@ const Product = () => {
                         <hr className="my-2 bg-text/20" />
                         <div className="mt-10 flex justify-around">
                           <Link
-                            to={`/listings/detail?=${res.title}`}
+                            to={`/listings/detail/${res.title}`}
                             className="border-2 border-text text-text px-4 py-3 uppercase rounded-md font-semibold shadow-md flex items-center"
                           >
                             Detail Unit
                           </Link>
+
                           <a
                             href=""
                             className="bg-text text-white px-4 py-3 uppercase rounded-md font-semibold flex items-center shadow-md"
