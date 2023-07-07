@@ -16,7 +16,7 @@ const ProductDetail = () => {
 
   return (
     <div className="w-full">
-      <div className="containers mx-auto py-20">
+      <div className="containers mx-auto py-28">
         <Swiper
           spaceBetween={30}
           slidesPerView={1}
@@ -27,7 +27,7 @@ const ProductDetail = () => {
             <SwiperSlide>
               <div className=" h-[450px]">
                 <div className="">
-                  <img src={res} alt="" className="absolute bottom-[-10px]" />
+                  <img src={res} alt="" className="absolute bottom-[-50px]" />
                 </div>
               </div>
             </SwiperSlide>
