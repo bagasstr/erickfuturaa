@@ -26,18 +26,8 @@ const ProductDetail = () => {
           {myData.image.map((res, idx) => (
             <>
               <SwiperSlide>
-                <PhotoProvider>
-                  {myData.image.map((res, idx) => (
-                    <PhotoView key={idx} src={res}>
-                      {idx < 1 ? (
-                        <img src={res} alt="" className="desktop:hidden" />
-                      ) : undefined}
-                      {/* <img src={res} alt="" /> */}
-                    </PhotoView>
-                  ))}
-                </PhotoProvider>
+                <img src={res} alt="" />
               </SwiperSlide>
-              <img src={res} alt="" />
             </>
           ))}
         </Swiper>
