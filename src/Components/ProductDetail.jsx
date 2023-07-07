@@ -24,19 +24,21 @@ const ProductDetail = () => {
           onSwiper={(swiper) => console.log(swiper)}
         >
           {myData.image.map((res, idx) => (
-            <SwiperSlide>
-              <PhotoProvider>
-                {myData.image.map((res, idx) => (
-                  <PhotoView key={idx} src={res}>
-                    {idx < 1 ? (
-                      <img src={res} alt="" className="desktop:hidden" />
-                    ) : undefined}
-                    {/* <img src={res} alt="" /> */}
-                  </PhotoView>
-                ))}
-              </PhotoProvider>
+            <>
+              <SwiperSlide>
+                <PhotoProvider>
+                  {myData.image.map((res, idx) => (
+                    <PhotoView key={idx} src={res}>
+                      {idx < 1 ? (
+                        <img src={res} alt="" className="desktop:hidden" />
+                      ) : undefined}
+                      {/* <img src={res} alt="" /> */}
+                    </PhotoView>
+                  ))}
+                </PhotoProvider>
+              </SwiperSlide>
               <img src={res} alt="" />
-            </SwiperSlide>
+            </>
           ))}
         </Swiper>
       </div>
