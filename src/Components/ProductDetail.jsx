@@ -15,22 +15,36 @@ const ProductDetail = () => {
   useEffect(() => {}, [myData]);
 
   return (
-    <div className="">
-      <div className="pt-28">
+    <div className="w-full">
+      <div className="containers mx-auto py-20">
         <Swiper
-          spaceBetween={50}
+          spaceBetween={30}
           slidesPerView={1}
           onSlideChange={() => console.log("slide change")}
           onSwiper={(swiper) => console.log(swiper)}
         >
           {myData.image.map((res, idx) => (
-            <>
-              <SwiperSlide>
-                <img src={res} alt="" />
-              </SwiperSlide>
-            </>
+            <SwiperSlide>
+              <div className=" h-[450px]">
+                <div className="">
+                  <img src={res} alt="" className="absolute bottom-[-10px]" />
+                </div>
+              </div>
+            </SwiperSlide>
           ))}
         </Swiper>
+
+        <div className="mobile:hidden">
+          <PhotoProvider>
+            <div className="grid grid-cols-3 gap-x-4">
+              {myData.image.map((item, index) => (
+                <PhotoView key={index} src={item}>
+                  <img src={item} alt="" />
+                </PhotoView>
+              ))}
+            </div>
+          </PhotoProvider>
+        </div>
       </div>
     </div>
   );
