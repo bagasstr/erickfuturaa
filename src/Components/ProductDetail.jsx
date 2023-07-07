@@ -25,7 +25,7 @@ const ProductDetail = () => {
         >
           {myData.image.map((res, idx) => (
             <SwiperSlide>
-              <div className=" h-[450px]">
+              <div className=" h-[500px]">
                 <div className="">
                   <img src={res} alt="" className="absolute bottom-[-50px]" />
                 </div>
