@@ -4,10 +4,12 @@ import { data } from "../Data/ListingTerbaru/DataTerbaru.json";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 // Import Swiper React components
+import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/pagination";
 
 const ProductDetail = () => {
   const { title } = useParams();
@@ -18,10 +20,12 @@ const ProductDetail = () => {
     <div className="w-full">
       <div className="containers mx-auto py-28">
         <Swiper
+          modules={[Pagination]}
           spaceBetween={30}
           slidesPerView={1}
-          onSlideChange={() => console.log("slide change")}
+          pagination={{ clickable: true }}
           onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log("slide change")}
         >
           {myData.image.map((res, idx) => (
             <SwiperSlide>
