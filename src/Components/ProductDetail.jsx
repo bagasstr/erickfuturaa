@@ -53,6 +53,28 @@ const ProductDetail = () => {
             </div>
           </PhotoProvider>
         </div>
+        <div className="py-4 px-4">
+          <div className="">
+            <div className="bg-primary px-5 py-[.30rem] w-fit rounded-full">
+              <h1 className="text-white font-medium">{myData.type}</h1>
+            </div>
+            <div className="mt-4">
+              <h2 className="font-medium text-black/70">
+                {myData.market.toUpperCase()}
+              </h2>
+              <h1 className="font-semibold text-2xl">Rp {myData.harga}</h1>
+              <h3 className="font-medium mt-2 text-xl">{myData.title}</h3>
+              <h4 className="font-medium text-black/80">{myData.area}</h4>
+            </div>
+            <hr className="bg-black/10 my-3 py-[.1rem] rounded-full" />
+            <div className="">
+              <h1 className="font-bold text-xl text-black/70">
+                Informasi Properti
+              </h1>
+              <h2 className="font-medium text-black/70">Spesifikasi</h2>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
