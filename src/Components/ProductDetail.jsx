@@ -66,7 +66,7 @@ const ProductDetail = () => {
               <h3 className="font-medium mt-2 text-xl">{myData.title}</h3>
               <h4 className="font-medium text-black/80">{myData.area}</h4>
             </div>
-            <hr className="bg-black/10 my-3 py-[.1rem] rounded-full" />
+            <hr className="bg-black/10 my-3 rounded-full" />
             <div className="">
               <h1 className="font-bold text-xl text-black/70">
                 Informasi Properti
