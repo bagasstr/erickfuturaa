@@ -62,8 +62,12 @@ const ProductDetail = () => {
               <h2 className="font-medium text-black/70">
                 {myData.market.toUpperCase()}
               </h2>
-              <h1 className="font-semibold text-2xl">Rp {myData.harga}</h1>
-              <h3 className="font-medium mt-2 text-xl">{myData.title}</h3>
+              <h1 className="font-semibold text-2xl text-black/80">
+                Rp {myData.harga}
+              </h1>
+              <h3 className="font-medium mt-2 text-xl text-black/80">
+                {myData.title}
+              </h3>
               <h4 className="font-medium text-black/80">{myData.area}</h4>
             </div>
             <hr className="bg-black/10 my-3 rounded-full" />
