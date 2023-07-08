@@ -68,7 +68,7 @@ const ProductDetail = () => {
             </div>
             <hr className="bg-black/10 my-3 rounded-full" />
             <div className="">
-              <h1 className="font-bold text-xl text-black/70">
+              <h1 className="font-bold text-lg text-black/70">
                 Informasi Properti
               </h1>
               <h2 className="font-medium text-black/70">Spesifikasi</h2>
