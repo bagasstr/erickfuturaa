@@ -31,7 +31,11 @@ const ProductDetail = () => {
             <SwiperSlide>
               <div className=" h-[500px]">
                 <div className="">
-                  <img src={res} alt="" className="absolute bottom-[-50px]" />
+                  <img
+                    src={res}
+                    alt=""
+                    className="absolute bottom-[-50px] w-[500px] h-[500px] object-cover"
+                  />
                 </div>
               </div>
             </SwiperSlide>
