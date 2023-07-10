@@ -76,29 +76,56 @@ const ProductDetail = () => {
                 Informasi Properti
               </h1>
               <h2 className="font-medium text-black/70">Spesifikasi</h2>
-              <Swiper
-                modules={[Scrollbar]}
-                spaceBetween={20}
-                slidesPerView={3}
-                onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log("slide change")}
-              >
-                <SwiperSlide>
-                  <div className="p-2 shadow-lg rounded-md bg-white text-center ">
-                    <h1 className="font-semibold text-black/80">L.Tanah</h1>
-                    <h2 className="font-medium text-black/80">{myData.lbb}</h2>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className="p-2 shadow-lg rounded-md bg-white text-center ">
-                    <h1 className="font-semibold text-black/80">L.Bangunan</h1>
-                    <h2 className="font-medium text-black/80">{myData.lb}</h2>
-                  </div>
-                </SwiperSlide>
-              </Swiper>
             </div>
           </div>
+        </div>
+        <div className="h-[8rem]">
+          <Swiper
+            modules={[Scrollbar]}
+            spaceBetween={20}
+            slidesPerView={2}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log("slide change")}
+          >
+            <SwiperSlide>
+              <div className="p-2 shadow-lg rounded-md bg-white text-center ">
+                <h1 className="font-semibold text-black/80">L.Tanah</h1>
+                <h2 className="font-medium text-black/80">{myData.lbb}</h2>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="p-2 shadow-lg rounded-md bg-white text-center ">
+                <h1 className="font-semibold text-black/80">L.Bangunan</h1>
+                <h2 className="font-medium text-black/80">{myData.lb}</h2>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="p-2 shadow-lg rounded-md bg-white text-center ">
+                <h1 className="font-semibold text-black/80">K.Mandi</h1>
+                <h2 className="font-medium text-black/80">{myData.km}</h2>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="p-2 shadow-lg rounded-md bg-white text-center ">
+                <h1 className="font-semibold text-black/80">K.Tidur</h1>
+                <h2 className="font-medium text-black/80">{myData.kt}</h2>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="p-2 shadow-lg rounded-md bg-white text-center ">
+                <h1 className="font-semibold text-black/80">K.Tidur</h1>
+                <h2 className="font-medium text-black/80">{myData.kt}</h2>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="p-2 shadow-lg rounded-md bg-white text-center w-fit">
+                <h1 className="font-semibold text-black/80">Pemandangan</h1>
+                <h2 className="font-medium text-black/80">
+                  {myData.pemandang}
+                </h2>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
     </div>
