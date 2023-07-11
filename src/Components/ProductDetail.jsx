@@ -82,10 +82,10 @@ const ProductDetail = () => {
         <div className="h-[8rem]">
           <Swiper
             modules={[Scrollbar]}
-            spaceBetween={20}
-            slidesPerView={2}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
+            spaceBetween={10}
+            slidesPerView={"auto"}
+            // onSwiper={(swiper) => console.log(swiper)}
+            // onSlideChange={() => console.log("slide change")}
           >
             <SwiperSlide>
               <div className="p-2 shadow-lg rounded-md bg-white text-center ">
@@ -126,6 +126,13 @@ const ProductDetail = () => {
               </div>
             </SwiperSlide>
           </Swiper>
+        </div>
+        <hr />
+        <div className="py-4 px-4">
+          <h1 className="font-medium text-black/70">Deskripsi</h1>
+          <h2 className="font-medium mt-2 text-lg text-black/80">
+            {myData.title}
+          </h2>
         </div>
       </div>
     </div>
