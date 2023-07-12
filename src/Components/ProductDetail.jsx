@@ -10,12 +10,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-import Slick from "./Slick";
+import PreviewImage from "./PreviewImage";
+import SpekSingkat from "./SpekSingkat";
 
 const ProductDetail = () => {
   const { title } = useParams();
   const myData = data.find((data) => data.title === String(title));
   useEffect(() => {}, [myData]);
+  const [preview, setPreview] = useState(false);
 
   return (
     <div className="w-full">
@@ -29,20 +31,23 @@ const ProductDetail = () => {
           onSlideChange={() => console.log("slide change")}
         >
           {myData.image.map((res, idx) => (
-            <SwiperSlide>
-              <div className="">
+            <div key={idx} className="">
+              <SwiperSlide>
                 <div className="">
-                  <img
-                    src={res}
-                    alt=""
-                    className="w-[500px] h-[300px] object-cover"
-                  />
+                  <div className="">
+                    <img
+                      src={res}
+                      alt=""
+                      onClick={() => setPreview((prev) => !prev)}
+                      className="w-[500px] h-[300px] object-cover cursor-pointer"
+                    />
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
+              </SwiperSlide>
+            </div>
           ))}
+          {preview ? <PreviewImage /> : null}
         </Swiper>
-
         <div className="mobile:hidden">
           <PhotoProvider>
             <div className="grid grid-cols-3 gap-x-4">
@@ -80,7 +85,7 @@ const ProductDetail = () => {
             </div>
           </div>
         </div>
-        <Slick props={myData} />
+        <SpekSingkat props={myData} />
         <hr />
         <div className="py-4 px-4">
           <h1 className="font-medium text-black/70">Deskripsi</h1>

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Slick = ({ props }) => {
+const SpekSingkat = ({ props }) => {
   return (
     <div className="pb-10">
       <div className="flex gap-x-3 overflow-auto py-5">
@@ -35,4 +35,4 @@ const Slick = ({ props }) => {
   );
 };
 
-export default Slick;
+export default SpekSingkat;
