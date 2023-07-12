@@ -3,7 +3,7 @@ import React from "react";
 const Slick = ({ props }) => {
   return (
     <div className="pb-10">
-      <div className="flex gap-x-3 overflow-auto">
+      <div className="flex gap-x-3 overflow-auto py-5">
         <div className="bg-white shadow-lg text-center py-2 px-3 rounded-md">
           <h1 className="font-semibold text-base text-black/70">L.Bangunan</h1>
           <p className="text-medium text-black/60 text-base">{props.lb}</p>
