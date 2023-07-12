@@ -56,8 +56,8 @@ const ProductDetail = () => {
         </div>
         <div className="py-4 px-4">
           <div className="">
-            <div className="bg-white px-5 py-[.30rem]  rounded-full">
-              <h1 className="text-white font-medium">{myData.type}</h1>
+            <div className="bg-primary w-fit px-4 py-[.30rem] rounded-full">
+              <h1 className="text-white text-xs font-medium">{myData.type}</h1>
             </div>
             <div className="mt-4">
               <h2 className="font-medium text-black/70">
