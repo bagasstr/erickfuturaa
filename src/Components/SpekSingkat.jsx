@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import SpekLengkap from "./SpekLengkap";
 
 const SpekSingkat = ({ props }) => {
+  const [spekLengkap, setSpekLengkap] = useState(false);
   return (
-    <div className="pb-10">
+    <div className="pb-5">
       <div className="flex gap-x-3 overflow-auto py-5">
         <div className="bg-white shadow-lg text-center py-2 px-3 rounded-md">
           <h1 className="font-semibold text-sm text-black/70">L.Bangunan</h1>
@@ -31,6 +33,15 @@ const SpekSingkat = ({ props }) => {
           <p className="text-medium text-black/60 text-xs">{props.pemandang}</p>
         </div>
       </div>
+      <div className="px-4 pt-4">
+        <h1
+          onClick={() => setSpekLengkap((prev) => !prev)}
+          className="text-black/70 text-sm font-semibold"
+        >
+          Lihat Selengkapnya
+        </h1>
+      </div>
+      {spekLengkap ? <SpekLengkap props={setSpekLengkap} /> : null}
     </div>
   );
 };
