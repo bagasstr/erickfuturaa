@@ -4,7 +4,7 @@ import { BsWhatsapp } from "react-icons/bs";
 const ButtonWa = () => {
   return (
     <div className="fixed bottom-4 w-full">
-      <div className="bg-primary mx-auto items-center justify-center gap-x-2 w-[20rem] py-3 px-4 rounded-md flex">
+      <div className="bg-primary mx-auto items-center justify-center gap-x-2 w-[40rem] py-3 px-4 rounded-md flex">
         <BsWhatsapp className="font-medium text-sm text-white" />
         <h1 className="font-medium text-sm text-white">WhatsApp</h1>
       </div>
