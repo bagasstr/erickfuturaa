@@ -96,7 +96,7 @@ const ProductDetail = () => {
             <hr />
             <div className="py-4 px-4">
               <h1 className="font-medium text-black/70">Deskripsi</h1>
-              <h2 className="font-medium mt-2 text-lg text-black/80">
+              <h2 className="font-medium mt-2 text-sm text-black/80">
                 {myData.deskripsi}
               </h2>
             </div>
