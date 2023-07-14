@@ -72,6 +72,7 @@ const Product = () => {
                         <div className="mt-10 flex justify-around">
                           <Link
                             to={`/listings/detail/${res.title}`}
+                            preventScrollReset={false}
                             className="border-2 border-text text-text px-4 py-3 uppercase rounded-md font-semibold shadow-md flex items-center"
                           >
                             Detail Unit

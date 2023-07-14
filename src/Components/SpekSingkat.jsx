@@ -11,7 +11,7 @@ const SpekSingkat = ({ props }) => {
           <p className="text-medium text-black/60 text-xs">{props.lb}</p>
         </div>
         <div className="bg-white shadow-lg text-center py-2 px-3 rounded-md">
-          <h1 className="font-semibold text-sm text-black/70">
+          <h1 clpassName="font-semibold text-sm text-black/70">
             L.Tanah/Keseluruhan
           </h1>
           <p className="text-medium text-black/60 text-xs">{props.lbb}</p>
