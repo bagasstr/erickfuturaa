@@ -37,7 +37,7 @@ const SpekSingkat = ({ props }) => {
       <div className="px-4 pt-4">
         <h1
           onClick={() => setSpekLengkap((prev) => !prev)}
-          className="text-black/70 text-xs font-semibold"
+          className="text-black/70 text-sm font-semibold"
         >
           Lihat Selengkapnya
         </h1>
