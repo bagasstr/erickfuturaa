@@ -15,58 +15,102 @@ const SpekLengkap = ({ props, data }) => {
         </div>
         <div className="mt-10">
           <div className="flex justify-between items-center border-t-2 border-black/20">
-            <h1 className="py-4">Kamar Tidur</h1>
-            <h2 className="py-4">{data.kt}</h2>
+            <h1 className="py-4 font-medium text-sm text-black/70">
+              Kamar Tidur
+            </h1>
+            <h2 className="py-4 font-medium text-black/60 text-sm ">
+              {data.kt}
+            </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
-            <h1 className="py-4">Kamar Mandi</h1>
-            <h2 className="py-4">{data.km}</h2>
+            <h1 className="py-4 font-medium text-sm text-black/70">
+              Kamar Mandi
+            </h1>
+            <h2 className="py-4 font-medium text-black/60 text-sm ">
+              {data.km}
+            </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
-            <h1 className="py-4">Luas Bangunan</h1>
-            <h2 className="py-4">{data.lb}</h2>
+            <h1 className="py-4 font-medium text-sm text-black/70">
+              Luas Bangunan
+            </h1>
+            <h2 className="py-4 font-medium text-black/60 text-sm ">
+              {data.lb}
+            </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
-            <h1 className="py-4">Luas Bangunan + Balkon</h1>
-            <h2 className="py-4">{data?.lbb ? data.lbb : "-"}</h2>
+            <h1 className="py-4 font-medium text-sm text-black/70">
+              Luas Bangunan + Balkon
+            </h1>
+            <h2 className="py-4 font-medium text-black/60 text-sm ">
+              {data?.lbb ? data.lbb : "-"}
+            </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
-            <h1 className="py-4">Luas Tanah</h1>
-            <h2 className="py-4">{data?.lt ? data.lt : "-"}</h2>
+            <h1 className="py-4 font-medium text-sm text-black/70">
+              Luas Tanah
+            </h1>
+            <h2 className="py-4 font-medium text-black/60 text-sm ">
+              {data?.lt ? data.lt : "-"}
+            </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
-            <h1 className="py-4">Garasi</h1>
-            <h2 className="py-4">{data?.garasi ? data.garasi : "-"}</h2>
+            <h1 className="py-4 font-medium text-sm text-black/70">Garasi</h1>
+            <h2 className="py-4 font-medium text-black/60 text-sm ">
+              {data?.garasi ? data.garasi : "-"}
+            </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
-            <h1 className="py-4">Carport</h1>
-            <h2 className="py-4">
+            <h1 className="py-4 font-medium text-sm text-black/70">Carport</h1>
+            <h2 className="py-4 font-medium text-black/60 text-sm ">
               {data?.garasi ? data.garasi : "parkiran umum"}
             </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
-            <h1 className="py-4">Tipe Properti</h1>
-            <h2 className="py-4">{data?.type}</h2>
+            <h1 className="py-4 font-medium text-sm text-black/70">
+              Tipe Properti
+            </h1>
+            <h2 className="py-4 font-medium text-black/60 text-sm ">
+              {data?.type}
+            </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
-            <h1 className="py-4">Sertifikat</h1>
-            <h2 className="py-4">{data?.serti}</h2>
+            <h1 className="py-4 font-medium text-sm text-black/70">
+              Sertifikat
+            </h1>
+            <h2 className="py-4 font-medium text-black/60 text-sm ">
+              {data?.serti}
+            </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
-            <h1 className="py-4">Listrik</h1>
-            <h2 className="py-4">{data?.listrik}</h2>
+            <h1 className="py-4 font-medium text-sm text-black/70">Listrik</h1>
+            <h2 className="py-4 font-medium text-black/60 text-sm ">
+              {data?.listrik}
+            </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
-            <h1 className="py-4">KT. Pembantu</h1>
-            <h2 className="py-4">{data?.ktp ? data.ktp : "-"}</h2>
+            <h1 className="py-4 font-medium text-sm text-black/70">
+              KT. Pembantu
+            </h1>
+            <h2 className="py-4 font-medium text-black/60 text-sm ">
+              {data?.ktp ? data.ktp : "-"}
+            </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
-            <h1 className="py-4">KM. Pembantu</h1>
-            <h2 className="py-4">{data?.kmp ? data.kmp : "-"}</h2>
+            <h1 className="py-4 font-medium text-sm text-black/70">
+              KM. Pembantu
+            </h1>
+            <h2 className="py-4 font-medium text-black/60 text-sm ">
+              {data?.kmp ? data.kmp : "-"}
+            </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
-            <h1 className="py-4">Jumlah Lantai</h1>
-            <h2 className="py-4">{data?.jl ? data.jl : "-"}</h2>
+            <h1 className="py-4 font-medium text-sm text-black/70">
+              Jumlah Lantai
+            </h1>
+            <h2 className="py-4 font-medium text-black/60 text-sm ">
+              {data?.jl ? data.jl : "-"}
+            </h2>
           </div>
         </div>
       </div>
