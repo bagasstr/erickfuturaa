@@ -92,7 +92,7 @@ const ProductDetail = () => {
                 </div>
               </div>
             </div>
-            <SpekSingkat props={myData} />
+            <SpekSingkat props={myData} datas={myData} />
             <hr />
             <div className="py-4 px-4">
               <h1 className="font-medium text-black/70">Deskripsi</h1>
