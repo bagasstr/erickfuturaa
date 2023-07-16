@@ -24,42 +24,34 @@ const Navbar = () => {
                 menu ? "top-[4rem]" : "top-[-15rem]"
               }`}
             >
-              <li>
-                <Link
-                  to={"/"}
-                  onClick={() => setMenu((prev) => !menu)}
-                  className="font-medium text-lg text-black/80 mobile:text-white hover:text-primary/75"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to={"/all-listings"}
-                  onClick={() => setMenu((prev) => !menu)}
-                  className="font-medium text-lg text-black/80 mobile:text-white hover:text-primary/75"
-                >
-                  Product
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to={"/profile-me"}
-                  onClick={() => setMenu((prev) => !menu)}
-                  className="font-medium text-lg text-black/80 mobile:text-white hover:text-primary/75"
-                >
-                  Profile
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to={"/contact-us"}
-                  onClick={() => setMenu((prev) => !menu)}
-                  className="font-medium text-lg text-black/80 mobile:text-white hover:text-primary/75"
-                >
-                  Contact
-                </Link>
-              </li>
+              <Link
+                to={"/"}
+                onClick={() => setMenu((prev) => !menu)}
+                className="font-medium text-lg text-black/80 mobile:text-white hover:text-primary/75"
+              >
+                <li>Home</li>
+              </Link>
+              <Link
+                to={"/all-listings"}
+                onClick={() => setMenu((prev) => !menu)}
+                className="font-medium text-lg text-black/80 mobile:text-white hover:text-primary/75"
+              >
+                <li>Product</li>
+              </Link>
+              <Link
+                to={"/profile-me"}
+                onClick={() => setMenu((prev) => !menu)}
+                className="font-medium text-lg text-black/80 mobile:text-white hover:text-primary/75"
+              >
+                <li>Profile</li>
+              </Link>
+              <Link
+                to={"/contact-us"}
+                onClick={() => setMenu((prev) => !menu)}
+                className="font-medium text-lg text-black/80 mobile:text-white hover:text-primary/75"
+              >
+                <li>Contact</li>
+              </Link>
             </ul>
           </div>
         </div>
