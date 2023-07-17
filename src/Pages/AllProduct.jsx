@@ -21,8 +21,12 @@ const AllProduct = ({ props }) => {
     //   : data;
     if (filterOption) {
       // Lakukan filter pada data produk berdasarkan query pencarian
-      const filtered = data.filter((product) =>
-        product.area.toLowerCase().includes(filterOption.toLowerCase())
+      const filtered = data.filter(
+        (product) =>
+          product.area.toLowerCase().includes(filterOption.toLowerCase()) ||
+          product.typeProperty
+            .toLowerCase()
+            .includes(filterOption.toLowerCase())
       );
       setFilteredProducts(filtered);
     } else {
