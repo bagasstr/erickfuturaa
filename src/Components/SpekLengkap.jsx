@@ -112,6 +112,14 @@ const SpekLengkap = ({ props, data }) => {
               {data?.jl ? data.jl : "-"}
             </h2>
           </div>
+          <div className="flex justify-between items-center border-t-2 border-black/20">
+            <h1 className="py-4 font-medium text-sm text-black/70">
+              Pemandangan
+            </h1>
+            <h2 className="py-4 font-medium text-black/60 text-sm ">
+              {data?.pemandang ? data.pemandang : "-"}
+            </h2>
+          </div>
         </div>
       </div>
     </div>
