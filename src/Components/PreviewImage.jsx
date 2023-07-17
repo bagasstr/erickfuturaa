@@ -45,7 +45,7 @@ const PreviewImage = ({ props }) => {
                       src={res}
                       alt=""
                       onClick={() => setPreview((prev) => !prev)}
-                      className="w-full h-[430px] object-cover cursor-pointer"
+                      className="w-full h-[450px] object-cover cursor-pointer"
                     />
                   </div>
                 </div>
