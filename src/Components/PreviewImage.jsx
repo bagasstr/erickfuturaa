@@ -28,7 +28,9 @@ const PreviewImage = ({ props }) => {
           className="text-4xl rounded-full shadow-lg text-white "
         />
       </div>
-      <ButtonWa />
+      <div className="absolute z-50">
+        <ButtonWa />
+      </div>
       <div className="">
         <Swiper
           modules={[Pagination]}
@@ -45,7 +47,7 @@ const PreviewImage = ({ props }) => {
                       src={res}
                       alt=""
                       onClick={() => setPreview((prev) => !prev)}
-                      className="w-full h-[450px] object-cover cursor-pointer"
+                      className="w-full h-[500px] object-cover cursor-pointer"
                     />
                   </div>
                 </div>
