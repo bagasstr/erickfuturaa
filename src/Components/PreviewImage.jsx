@@ -7,12 +7,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 
 import "swiper/css";
+
+import "swiper/css/pagination";
 import ButtonWa from "./ButtonWa";
 
 const PreviewImage = ({ props }) => {
   const { title } = useParams();
   const myData = data.find((data) => data.title === String(title));
   useEffect(() => {}, [myData]);
+
   return (
     <div className="fixed pt-[4.2rem] top-0 right-0 bg-black w-screen h-screen z-50">
       <div className="flex items-center justify-between px-3 py-5">
@@ -27,7 +30,12 @@ const PreviewImage = ({ props }) => {
       </div>
       <ButtonWa />
       <div className="">
-        <Swiper modules={[]} spaceBetween={30} slidesPerView={1}>
+        <Swiper
+          modules={[Pagination]}
+          spaceBetween={30}
+          slidesPerView={1}
+          pagination={{ clickable: true }}
+        >
           {myData.image.map((res, idx) => (
             <div key={idx} className="">
               <SwiperSlide>

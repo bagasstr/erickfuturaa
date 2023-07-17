@@ -32,8 +32,6 @@ const ProductDetail = () => {
               spaceBetween={30}
               slidesPerView={1}
               pagination={{ clickable: true }}
-              onSwiper={(swiper) => console.log(swiper)}
-              onSlideChange={() => console.log("slide change")}
             >
               {myData.image.map((res, idx) => (
                 <div key={idx} className="">
