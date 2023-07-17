@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import data from "../Data/ListinganPopular/DataPopular.json";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { FaBath, FaBed, FaLocationDot } from "react-icons/fa6";
 import { GiResize } from "react-icons/gi";
@@ -9,18 +9,10 @@ import { BsFillBuildingFill } from "react-icons/bs";
 const AllProduct = ({ props }) => {
   const location = useLocation();
   const filterOption = new URLSearchParams(location.search).get("area");
-
+  const navigates = useNavigate();
   const [filteredProducts, setFilteredProducts] = useState([]);
   useEffect(() => {
-    // const filtered = filterOption
-    //   ? data.filter(
-    //       (product) =>
-    //         product.area.toLowerCase().includes(filterOption.toLowerCase()) ===
-    //         filterOption
-    //     )
-    //   : data;
     if (filterOption) {
-      // Lakukan filter pada data produk berdasarkan query pencarian
       const filtered = data.filter(
         (product) =>
           product.area.toLowerCase().includes(filterOption.toLowerCase()) ||

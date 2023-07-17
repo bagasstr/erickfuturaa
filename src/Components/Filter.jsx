@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { data } from "../Data/ListingTerbaru/DataTerbaru.json";
 
 const Filter = () => {
   const [type, setType] = useState("");
@@ -16,8 +17,14 @@ const Filter = () => {
     // const filterd = setInputValue(valueInput);
 
     // setLowerCase(valueInput);
-
-    navigate(`/all-listings?area=${area}`);
+    const matchFilter = data.find(
+      (produk) => produk.area.toLowerCase() === area.toLowerCase()
+    );
+    if (matchFilter) {
+      navigate(`/all-listings?area=${area}`);
+    } else {
+      alert(`Listingan ${area} tidak ada`);
+    }
   };
 
   return (
