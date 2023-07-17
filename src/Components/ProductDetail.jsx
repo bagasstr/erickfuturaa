@@ -51,7 +51,7 @@ const ProductDetail = () => {
                   </SwiperSlide>
                 </div>
               ))}
-              {preview ? <PreviewImage /> : null}
+              {preview ? <PreviewImage props={setPreview} /> : null}
             </Swiper>
             <div className="mobile:hidden">
               <PhotoProvider>
