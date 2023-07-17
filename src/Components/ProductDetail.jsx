@@ -13,6 +13,7 @@ import "swiper/css/pagination";
 import PreviewImage from "./PreviewImage";
 import SpekSingkat from "./SpekSingkat";
 import ButtonWa from "./ButtonWa";
+import Navbar from "./Navbar";
 
 const ProductDetail = () => {
   const { title } = useParams();
@@ -24,6 +25,7 @@ const ProductDetail = () => {
 
   return (
     <>
+      <Navbar />
       <div key={myData.id} className="">
         <div className="w-full">
           <div className="containers mx-auto py-16">

@@ -4,6 +4,7 @@ import Filter from "../Components/Filter";
 import Product from "../Components/Product";
 import Contact from "../Components/Contact";
 import Footer from "../Components/Footer";
+import Navbar from "../Components/Navbar";
 
 const HomePage = () => {
   return (

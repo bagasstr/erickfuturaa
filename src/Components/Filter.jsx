@@ -5,10 +5,18 @@ const Filter = () => {
   const [type, setType] = useState("");
   const [typeProperty, setTypeProperty] = useState("");
   const [area, setArea] = useState("");
+  const [inputValue, setInputValue] = useState("");
+  const [lowerCases, setLowerCase] = useState("");
 
   const navigate = useNavigate();
 
   const handlerFilter = () => {
+    // console.log(area);
+    // const valueInput = area.toLowerCase();
+    // const filterd = setInputValue(valueInput);
+
+    // setLowerCase(valueInput);
+
     navigate(`/all-listings?area=${area}`);
   };
 
@@ -23,23 +31,39 @@ const Filter = () => {
             Cari Properti Dengan Mudah
           </h1>
           <div className="text-center space-y-5">
-            <select
-              id="area"
-              className="bg-gray-50 border border-gray-300 text-primary font-medium text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 mobile:text-lg shadow-md"
-              value={area}
-              onChange={(e) => setArea(e.target.value)}
+            <label
+              for="default-search"
+              class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-gray-300"
             >
-              <option selected className="text-xs">
-                Pilih Area Property
-              </option>
-              <option value="Jakarta Barat" className="text-xs">
-                Jakarta Barat
-              </option>
-              <option value="Tangerang" className="text-xs">
-                Tangerang
-              </option>
-            </select>
-
+              Search
+            </label>
+            <div class="relative">
+              <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
+                <svg
+                  class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
+              </div>
+              <input
+                type="search"
+                id="default-search"
+                class="block p-4 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Search Mockups, Logos..."
+                value={area}
+                onChange={(e) => setArea(e.target.value)}
+                required
+              />
+            </div>
             <button
               onClick={handlerFilter}
               className="bg-white px-4 py-2 rounded-md mt-6 shadow-md text-lg font-semibold w-full text-primary"

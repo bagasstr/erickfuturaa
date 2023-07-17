@@ -6,17 +6,28 @@ import { FaBath, FaBed, FaLocationDot } from "react-icons/fa6";
 import { GiResize } from "react-icons/gi";
 import { BsFillBuildingFill } from "react-icons/bs";
 
-const AllProduct = () => {
+const AllProduct = ({ props }) => {
   const location = useLocation();
-  let filterOption;
-  filterOption = new URLSearchParams(location.search).get("area");
+  const filterOption = new URLSearchParams(location.search).get("area");
 
   const [filteredProducts, setFilteredProducts] = useState([]);
   useEffect(() => {
-    const filtered = filterOption
-      ? data.filter((product) => product.area === filterOption)
-      : data;
-    setFilteredProducts(filtered);
+    // const filtered = filterOption
+    //   ? data.filter(
+    //       (product) =>
+    //         product.area.toLowerCase().includes(filterOption.toLowerCase()) ===
+    //         filterOption
+    //     )
+    //   : data;
+    if (filterOption) {
+      // Lakukan filter pada data produk berdasarkan query pencarian
+      const filtered = data.filter((product) =>
+        product.area.toLowerCase().includes(filterOption.toLowerCase())
+      );
+      setFilteredProducts(filtered);
+    } else {
+      setFilteredProducts(data);
+    }
   }, [filterOption]);
   return (
     <div>
