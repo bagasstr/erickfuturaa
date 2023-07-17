@@ -17,7 +17,7 @@ const PreviewImage = ({ props }) => {
       <div className="z-50 absolute right-7 top-24">
         <AiOutlineCloseCircle
           onClick={() => props((prev) => !prev)}
-          className="text-4xl text-white "
+          className="text-4xl rounded-full shadow-lg text-white "
         />
       </div>
       <Swiper modules={[]} spaceBetween={30} slidesPerView={1}>
