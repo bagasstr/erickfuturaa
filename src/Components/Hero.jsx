@@ -3,16 +3,17 @@ import { BsFillHousesFill } from "react-icons/bs";
 import { RiMouseLine } from "react-icons/ri";
 import background from "/hero.jpg";
 import Navbar from "./Navbar";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   return (
     <div className="w-full">
-      <div className="max-w-[1024px] mx-auto flex justify-center">
-        <div className="imgHero mt-16">
+      <div className="flex justify-center">
+        <div className="imgHero overflow-y-hidden">
           <img
             src="/heroImg.jpg"
             alt="heroImage"
-            className="brightness-[.4] mobile:hidden"
+            className="brightness-[.4] w-screen h-screen mobile:hidden"
           />
           <img
             src="/hero.jpg"
@@ -20,7 +21,7 @@ const Hero = () => {
             className="brightness-[.4] desktop:hidden"
           />
         </div>
-        <div className="absolute top-[10rem] text-white">
+        <div className="absolute top-[10rem] desktop:top-[15rem] text-white">
           <div className="heroLogo gap-x-2 flex flex-col justify-center items-center">
             <BsFillHousesFill className="text-white text-3xl mb-2" />
             <h1 className="text-white font-semibold text-2xl mb-3">
@@ -30,12 +31,19 @@ const Hero = () => {
               Agent Futura Property, Jual, Beli Dan Sewa Property, Mulai dari
               property primary hingga property secondary.
             </h2>
-            <a href="#home">
+            <Link
+              activeClass="active"
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
               <div className="flex flex-col justify-center items-center gap-y-3 cursor-pointer text-white/80">
                 <RiMouseLine className="text-2xl mt-[6rem]" />
                 <h1 className="text-sm">Scroll Down</h1>
               </div>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

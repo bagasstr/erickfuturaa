@@ -1,29 +1,20 @@
 import React from "react";
+import { IoLogoWhatsapp } from "react-icons/io5";
 
 const Contact = () => {
   return (
     <div className="w-full">
-      <div className="containers px-2">
-        <div className="grid mobile:grid-cols-1 tablet:grid-cols-2 gap-y-12 bg-gradient-to-r from-primary to-bg p-10 tablet:p-[60px] rounded-md">
-          <div>
-            <h3 className="text-white text-3xl font-semibold">Hubungi Kami</h3>
-
-            <p className="text-xl text-white mt-4">
-              Hubungi kami untuk menanyakan ketersedian property
-            </p>
-          </div>
-
-          <div>
-            <div className="flex justify-center">
-              <a
-                href=""
-                className="bg-primary hover:bg-white/10 text-white py-3 px-5 rounded-lg font-semibold border-4 border-white"
-              >
-                WHATSAPP
-              </a>
-            </div>
-          </div>
-        </div>
+      <div className="grid grid-cols-2 mobile:grid-cols-1 mobile:py-10  items-center bg-gradient-to-r from-secc desktop:py-16 to-bg mobile:gap-y-7 mobile:text-center justify-items-center text-white px-10">
+        <h1 className="text-xl mobile:text-base mobile:font-semibold font-bold">
+          Jika ada pertanyaan <br /> silahkan hubungi kami.
+        </h1>
+        <a
+          href=""
+          className="flex items-center mobile:text-sm border-2 text-lg space-x-1 font-medium border-white text-white px-5 py-3 rounded-md"
+        >
+          <IoLogoWhatsapp className="text-xl" />
+          <h1 className="">What'sApp</h1>
+        </a>
       </div>
     </div>
   );
