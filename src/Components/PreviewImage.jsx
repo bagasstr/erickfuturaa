@@ -22,7 +22,7 @@ const PreviewImage = ({ props }) => {
       <Navbar hidden={"hidden"} />
       <div
         id="imagePreview"
-        className="fixed top-0 right-0 bg-black w-screen h-screen z-[99] image-preview"
+        className="fixed top-0 right-0 bg-black w-screen z-[99] image-preview"
       >
         <div className="flex items-center justify-around mobile:justify-between mobile:px-4 py-5">
           <div className="">
