@@ -29,7 +29,7 @@ const ProductDetail = () => {
       <Navbar primary={"text-primary"} white={"text-primary"} />
       <div key={myData.id} className="">
         <div className="w-full">
-          <div className="containers pt-28">
+          <div className="containers mobile:pt-16 desktop:pt-28">
             <Swiper
               modules={[Pagination]}
               spaceBetween={30}
