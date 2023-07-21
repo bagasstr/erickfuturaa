@@ -153,7 +153,7 @@ const ProductDetail = () => {
               </div>
             </div>
           </div>
-          <div className="mobile:sticky desktop:hidden mobile:bottom-0">
+          <div className="mobile:sticky desktop:hidden mobile:bottom-2">
             <ButtonWa />
           </div>
         </div>
