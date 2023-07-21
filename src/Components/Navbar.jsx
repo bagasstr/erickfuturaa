@@ -18,7 +18,7 @@ const Navbar = ({ primary, white }) => {
   return (
     <>
       <div
-        className={`w-full fixed top-0 left-0 z-50 ${
+        className={`w-full fixed top-0 left-0 z-[99] ${
           colorChange
             ? `bg-white shadow-md ${white}`
             : `bg-transparent ${primary}`
