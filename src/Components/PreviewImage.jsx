@@ -51,7 +51,7 @@ const PreviewImage = ({ props }) => {
                       <img
                         src={res}
                         alt=""
-                        className="w-full h-[520px] mobile:h-screen mobile:object-cover desktop:object-contain cursor-pointer"
+                        className="w-full h-[600px] mobile:object-cover desktop:object-contain cursor-pointer"
                       />
                     </div>
                   </div>
