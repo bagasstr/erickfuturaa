@@ -35,9 +35,7 @@ const PreviewImage = ({ props }) => {
             <AiOutlineCloseCircle className="text-4xl rounded-full shadow-lg text-white " />
           </Link>
         </div>
-        <div className="absolute bottom-3 mobile:bottom-40 right-0 left-0 desktop:w-[500px] desktop:mx-auto  z-50">
-          <ButtonWa />
-        </div>
+
         <div className="">
           <Swiper
             modules={[Pagination]}
@@ -61,6 +59,9 @@ const PreviewImage = ({ props }) => {
               </div>
             ))}
           </Swiper>
+          <div className="desktop:w-[500px] desktop:mx-auto">
+            <ButtonWa />
+          </div>
         </div>
       </div>
     </>
