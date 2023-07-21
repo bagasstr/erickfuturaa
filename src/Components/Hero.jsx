@@ -27,7 +27,7 @@ const Hero = () => {
             <h1 className="text-white desktop:text-5xl font-semibold text-2xl mb-3">
               ERICKFUTURA
             </h1>
-            <h2 className="text-center desktop:text-base bg-black/30 desktop:rounded-md text-sm font-light desktop:w-[30rem] w-[17rem]">
+            <h2 className="text-center desktop:text-base desktop:rounded-md text-sm font-light desktop:w-[30rem] w-[17rem]">
               Agent Futura Property, Jual, Beli Dan Sewa Property, Mulai dari
               property primary hingga property secondary.
             </h2>
