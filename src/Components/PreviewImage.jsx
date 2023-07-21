@@ -35,7 +35,7 @@ const PreviewImage = ({ props }) => {
             <AiOutlineCloseCircle className="text-4xl rounded-full shadow-lg text-white " />
           </Link>
         </div>
-        <div className="absolute bottom-3 right-0 left-0 desktop:w-[500px] desktop:mx-auto  z-50">
+        <div className="absolute bottom-3 mobile:bottom-40 right-0 left-0 desktop:w-[500px] desktop:mx-auto  z-50">
           <ButtonWa />
         </div>
         <div className="">
