@@ -125,7 +125,7 @@ const ProductDetail = () => {
               </div>
               {/* Profile left */}
               <div className="flex flex-col mx-4">
-                <div className="mt-10 gap-x-4 w-[300px] mobile:w-full desktop:sticky desktop:top-28 bg-white shadow-lg px-5 py-5 h-fit">
+                <div className="mt-10 gap-x-4 rounded-md w-[300px] mobile:w-full desktop:sticky desktop:top-28 bg-white shadow-lg px-5 py-5 h-fit">
                   <div className="flex justify-center items-center gap-x-3">
                     <div>
                       <img
