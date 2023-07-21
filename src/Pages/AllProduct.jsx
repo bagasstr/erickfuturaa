@@ -5,6 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaBath, FaBed, FaLocationDot } from "react-icons/fa6";
 import { GiResize } from "react-icons/gi";
 import { BsFillBuildingFill } from "react-icons/bs";
+import Navbar from "../Components/Navbar";
 
 const AllProduct = ({ props }) => {
   const location = useLocation();
@@ -28,8 +29,9 @@ const AllProduct = ({ props }) => {
   // console.log(filteredProducts);
   return (
     <div>
+      <Navbar primary={"text-black/80"} white={"text-primary"} />
       <div className="w-full">
-        <div className="containers px-2 py-16">
+        <div className="containers px-2 py-16 pt-20">
           {/* Listingan Terbaru */}
           <div className="ListinganTerbaru">
             <div className="mobile:grid-cols-1 desktop:justify-items-center grid desktop:grid-cols-3 mobile:items-center">

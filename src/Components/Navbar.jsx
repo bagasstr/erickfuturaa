@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 import { BsFillHousesFill } from "react-icons/bs";
 
-const Navbar = ({ hidden }) => {
+const Navbar = ({ primary, white }) => {
   const [menu, setMenu] = useState(false);
   const [colorChange, setColorchange] = useState(false);
   const changeNavbarColor = () => {
@@ -20,21 +20,19 @@ const Navbar = ({ hidden }) => {
       <div
         className={`w-full fixed top-0 left-0 z-50 ${
           colorChange
-            ? "bg-white shadow-md text-black"
-            : "bg-transparent text-white"
+            ? `bg-white shadow-md ${white}`
+            : `bg-transparent ${primary}`
         }`}
       >
         <div className="max-w-[1024px] mx-auto py-5 mobile:px-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-x-2">
               <BsFillHousesFill
-                className={`  text-lg ${
-                  colorChange ? "text-primary" : "text-white"
-                }`}
+                className={`  text-lg ${colorChange ? { primary } : { white }}`}
               />
               <h1
                 className={`font-semibold  text-2xl ${
-                  colorChange ? "text-primary" : "text-white"
+                  colorChange ? { primary } : { white }
                 }`}
               >
                 ERICKFUTURA

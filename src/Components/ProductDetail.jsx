@@ -22,18 +22,20 @@ const ProductDetail = () => {
     window.scrollTo(0, 0);
   }, [myData]);
   const [preview, setPreview] = useState(false);
+  const [mainImage, setMainImage] = useState(myData.image[0]);
 
   return (
     <>
-      <Navbar />
+      <Navbar primary={"text-primary"} white={"text-primary"} />
       <div key={myData.id} className="">
         <div className="w-full">
-          <div className="containers mx-auto py-16">
+          <div className="containers mx-auto py-16 pt-28">
             <Swiper
               modules={[Pagination]}
               spaceBetween={30}
               slidesPerView={1}
               pagination={{ clickable: true }}
+              className="desktop:hidden"
             >
               {myData.image.map((res, idx) => (
                 <div key={idx} className="">
@@ -51,19 +53,34 @@ const ProductDetail = () => {
                   </SwiperSlide>
                 </div>
               ))}
-              {preview ? <PreviewImage props={setPreview} /> : null}
             </Swiper>
-            <div className="mobile:hidden">
+            {preview ? <PreviewImage props={setPreview} /> : null}
+            <div className="mobile:hidden ">
               <PhotoProvider>
-                <div className="grid grid-cols-3 gap-x-4">
-                  {myData.image.map((item, index) => (
-                    <PhotoView key={index} src={item}>
-                      <img src={item} alt="" />
-                    </PhotoView>
-                  ))}
+                <div className="desktop:flex desktop:gap-x-4 desktop:items-center desktop:flex-col">
+                  <div className="desktop:mb-10">
+                    <img
+                      src={mainImage}
+                      onClick={() => setPreview((prev) => !prev)}
+                      className="w-[300px] h-[400px] rounded-md"
+                      alt=""
+                    />
+                  </div>
+                  <div className="flex gap-x-5">
+                    {myData.image.map((item, index) => (
+                      <img
+                        key={index}
+                        src={item}
+                        onClick={() => setMainImage(item)}
+                        className="w-[50px] h-[50px] rounded-sm"
+                        alt=""
+                      />
+                    ))}
+                  </div>
                 </div>
               </PhotoProvider>
             </div>
+            <hr className="mt-10 bg-primary/10 h-[2px]" />
             <div className="py-4 px-4">
               <div className="">
                 <div className="bg-primary w-fit px-4 py-[.30rem] rounded-full">
@@ -100,7 +117,7 @@ const ProductDetail = () => {
                 {myData.deskripsi}
               </h2>
             </div>
-            <ButtonWa />
+            {/* <ButtonWa /> */}
           </div>
         </div>
       </div>
