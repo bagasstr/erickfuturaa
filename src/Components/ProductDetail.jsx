@@ -27,7 +27,7 @@ const ProductDetail = () => {
   return (
     <>
       <Navbar primary={"text-primary"} white={"text-primary"} />
-      <div key={myData.id} className="h-[200vh]">
+      <div key={myData.id} className="">
         <div className="w-full">
           <div className="containers pt-28">
             <Swiper
