@@ -44,19 +44,17 @@ const PreviewImage = ({ props }) => {
             pagination={{ clickable: true }}
           >
             {myData.image.map((res, idx) => (
-              <div key={idx} className="">
-                <SwiperSlide>
-                  <div className="">
-                    <div className="mobile:h-[500px] desktop:w-full desktop:h-[450px]">
-                      <img
-                        src={res}
-                        alt=""
-                        className="w-full h-full mobile:object-cover desktop:object-contain cursor-pointer"
-                      />
-                    </div>
+              <SwiperSlide key={idx}>
+                <div className="">
+                  <div className="mobile:h-[500px] desktop:w-full desktop:h-[450px]">
+                    <img
+                      src={res}
+                      alt=""
+                      className="w-full h-full mobile:object-cover desktop:object-contain cursor-pointer"
+                    />
                   </div>
-                </SwiperSlide>
-              </div>
+                </div>
+              </SwiperSlide>
             ))}
           </Swiper>
           <div className="absolute bottom-12 left-0 right-0 desktop:w-[500px] desktop:mx-auto">

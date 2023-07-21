@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import SpekLengkap from "./SpekLengkap";
 import { data } from "autoprefixer";
+import { Link } from "react-router-dom";
 
 const SpekSingkat = ({ props, datas }) => {
   const [spekLengkap, setSpekLengkap] = useState(false);
@@ -36,14 +37,14 @@ const SpekSingkat = ({ props, datas }) => {
         </div>
       </div>
       <div className="px-4 pt-4">
-        <h1
-          onClick={() => setSpekLengkap((prev) => !prev)}
-          className="text-black/70 text-sm font-semibold"
+        <Link
+          to={`/listings/detail/${props.title}/spek-lengkap`}
+          className="text-black/70 text-sm font-semibold cursor-pointer"
         >
           Lihat Selengkapnya
-        </h1>
+        </Link>
       </div>
-      {spekLengkap ? <SpekLengkap props={setSpekLengkap} data={datas} /> : null}
+      {/* {spekLengkap ? <SpekLengkap props={setSpekLengkap} data={datas} /> : null} */}
     </div>
   );
 };

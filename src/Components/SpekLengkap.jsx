@@ -1,25 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
-import data from "../Data/ListingTerbaru/DataTerbaru.json";
+import { data } from "../Data/ListingTerbaru/DataTerbaru.json";
+import { Link, useParams } from "react-router-dom";
 
-const SpekLengkap = ({ props, data }) => {
+const SpekLengkap = ({ props }) => {
+  const { title } = useParams();
+  const myData = data.find((data) => data.title === String(title));
+  useEffect(() => {}, [myData]);
   return (
     <div className="fixed overflow-y-scroll z-50 bottom-0 left-0 w-full bg-slate-200 h-screen">
-      <div className="px-6 py-8">
-        <div className="flex justify-between">
+      <div className="px-8 py-8">
+        <div className="flex fixed w-full justify-between">
           <h1 className="font-semibold text-lg text-black/80">Deskripsi</h1>
-          <AiFillCloseCircle
-            onClick={() => props((prev) => !prev)}
-            className="text-3xl"
-          />
+          <Link to={`/listings/detail/${myData.title}`} className="mr-20">
+            <AiFillCloseCircle className="text-3xl" />
+          </Link>
         </div>
-        <div className="mt-10">
+        <div className="mt-16">
           <div className="flex justify-between items-center border-t-2 border-black/20">
             <h1 className="py-4 font-medium text-sm text-black/70">
               Kamar Tidur
             </h1>
             <h2 className="py-4 font-medium text-black/60 text-sm ">
-              {data.kt}
+              {myData.kt}
             </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
@@ -27,7 +30,7 @@ const SpekLengkap = ({ props, data }) => {
               Kamar Mandi
             </h1>
             <h2 className="py-4 font-medium text-black/60 text-sm ">
-              {data.km}
+              {myData.km}
             </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
@@ -35,7 +38,7 @@ const SpekLengkap = ({ props, data }) => {
               Luas Bangunan
             </h1>
             <h2 className="py-4 font-medium text-black/60 text-sm ">
-              {data.lb}
+              {myData.lb}
             </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
@@ -43,7 +46,7 @@ const SpekLengkap = ({ props, data }) => {
               Luas Bangunan + Balkon
             </h1>
             <h2 className="py-4 font-medium text-black/60 text-sm ">
-              {data?.lbb ? data.lbb : "-"}
+              {myData?.lbb ? data.lbb : "-"}
             </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
@@ -51,19 +54,19 @@ const SpekLengkap = ({ props, data }) => {
               Luas Tanah
             </h1>
             <h2 className="py-4 font-medium text-black/60 text-sm ">
-              {data?.lt ? data.lt : "-"}
+              {myData?.lt ? data.lt : "-"}
             </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
             <h1 className="py-4 font-medium text-sm text-black/70">Garasi</h1>
             <h2 className="py-4 font-medium text-black/60 text-sm ">
-              {data?.garasi ? data.garasi : "-"}
+              {myData?.garasi ? data.garasi : "-"}
             </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
             <h1 className="py-4 font-medium text-sm text-black/70">Carport</h1>
             <h2 className="py-4 font-medium text-black/60 text-sm ">
-              {data?.garasi ? data.garasi : "parkiran umum"}
+              {myData?.garasi ? data.garasi : "parkiran umum"}
             </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
@@ -71,7 +74,7 @@ const SpekLengkap = ({ props, data }) => {
               Tipe Properti
             </h1>
             <h2 className="py-4 font-medium text-black/60 text-sm ">
-              {data?.type}
+              {myData?.type}
             </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
@@ -79,13 +82,13 @@ const SpekLengkap = ({ props, data }) => {
               Sertifikat
             </h1>
             <h2 className="py-4 font-medium text-black/60 text-sm ">
-              {data?.serti}
+              {myData?.serti}
             </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
             <h1 className="py-4 font-medium text-sm text-black/70">Listrik</h1>
             <h2 className="py-4 font-medium text-black/60 text-sm ">
-              {data?.listrik}
+              {myData?.listrik}
             </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
@@ -93,7 +96,7 @@ const SpekLengkap = ({ props, data }) => {
               KT. Pembantu
             </h1>
             <h2 className="py-4 font-medium text-black/60 text-sm ">
-              {data?.ktp ? data.ktp : "-"}
+              {myData?.ktp ? data.ktp : "-"}
             </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
@@ -101,7 +104,7 @@ const SpekLengkap = ({ props, data }) => {
               KM. Pembantu
             </h1>
             <h2 className="py-4 font-medium text-black/60 text-sm ">
-              {data?.kmp ? data.kmp : "-"}
+              {myData?.kmp ? data.kmp : "-"}
             </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
@@ -109,7 +112,7 @@ const SpekLengkap = ({ props, data }) => {
               Jumlah Lantai
             </h1>
             <h2 className="py-4 font-medium text-black/60 text-sm ">
-              {data?.jl ? data.jl : "-"}
+              {myData?.jl ? data.jl : "-"}
             </h2>
           </div>
           <div className="flex justify-between items-center border-t-2 border-black/20">
@@ -117,7 +120,7 @@ const SpekLengkap = ({ props, data }) => {
               Pemandangan
             </h1>
             <h2 className="py-4 font-medium text-black/60 text-sm ">
-              {data?.pemandang ? data.pemandang : "-"}
+              {myData?.pemandang ? data.pemandang : "-"}
             </h2>
           </div>
         </div>
