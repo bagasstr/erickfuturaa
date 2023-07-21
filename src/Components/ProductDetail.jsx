@@ -27,9 +27,9 @@ const ProductDetail = () => {
   return (
     <>
       <Navbar primary={"text-primary"} white={"text-primary"} />
-      <div key={myData.id} className="">
+      <div key={myData.id} className="h-[200vh]">
         <div className="w-full">
-          <div className="containers mx-auto py-16 pt-28">
+          <div className="containers pt-28">
             <Swiper
               modules={[Pagination]}
               spaceBetween={30}
@@ -81,43 +81,80 @@ const ProductDetail = () => {
               </PhotoProvider>
             </div>
             <hr className="mt-10 bg-primary/10 h-[2px]" />
-            <div className="py-4 px-4">
+
+            <div className="desktop:flex desktop:gap-x-7 desktop:justify-between">
               <div className="">
-                <div className="bg-primary w-fit px-4 py-[.30rem] rounded-full">
-                  <h1 className="text-white text-xs font-medium">
-                    {myData.type}
-                  </h1>
+                <div className="py-4 px-4">
+                  <div className="">
+                    <div className="bg-primary w-fit px-4 py-[.30rem] rounded-full">
+                      <h1 className="text-white text-xs font-medium">
+                        {myData.type}
+                      </h1>
+                    </div>
+                    <div className="mt-4">
+                      <h2 className="font-medium text-black/70">
+                        {myData.market.toUpperCase()}
+                      </h2>
+                      <h1 className="font-bold text-2xl text-black/80">
+                        Rp {myData.harga}
+                      </h1>
+                      <h3 className="font-medium mt-2 text-lg text-black/80">
+                        {myData.title}
+                      </h3>
+                      <h4 className="font-medium text-black/80">
+                        {myData.area}
+                      </h4>
+                    </div>
+                    <hr className="bg-black/10 my-3 rounded-full" />
+                    <div className="">
+                      <h1 className="font-bold text-lg text-black/70">
+                        Informasi Properti
+                      </h1>
+                      <h2 className="font-medium text-black/70">Spesifikasi</h2>
+                    </div>
+                  </div>
                 </div>
-                <div className="mt-4">
-                  <h2 className="font-medium text-black/70">
-                    {myData.market.toUpperCase()}
+                <SpekSingkat props={myData} datas={myData} />
+                <hr />
+                <div className="py-4 px-4 z-[-1]">
+                  <h1 className="font-medium text-black/70">Deskripsi</h1>
+                  <h2 className="font-medium mt-2 text-sm text-black/80">
+                    {myData.deskripsi}
                   </h2>
-                  <h1 className="font-bold text-2xl text-black/80">
-                    Rp {myData.harga}
-                  </h1>
-                  <h3 className="font-medium mt-2 text-lg text-black/80">
-                    {myData.title}
-                  </h3>
-                  <h4 className="font-medium text-black/80">{myData.area}</h4>
                 </div>
-                <hr className="bg-black/10 my-3 rounded-full" />
-                <div className="">
-                  <h1 className="font-bold text-lg text-black/70">
-                    Informasi Properti
-                  </h1>
-                  <h2 className="font-medium text-black/70">Spesifikasi</h2>
+              </div>
+              {/* Profile left */}
+              <div className="flex flex-col mx-4">
+                <div className="mt-10 gap-x-4 w-[300px] mobile:w-full desktop:sticky desktop:top-28 bg-white shadow-lg px-5 py-5 h-fit">
+                  <div className="flex justify-center items-center gap-x-3">
+                    <div>
+                      <img
+                        src="/profile.jpg"
+                        className="w-24 rounded-md"
+                        alt=""
+                      />
+                    </div>
+                    <div className="">
+                      <h1 className="text-black/80 font-semibold text-xl mt-5 ">
+                        Erick
+                      </h1>
+                      <h3 className="text-xs">
+                        Principal Consultant at Futura Property
+                      </h3>
+                    </div>
+                    <div className="">
+                      <img src="/logo-futura.png" className="w-28" alt="" />
+                    </div>
+                  </div>
+                  <div className="mobile:sticky mobile:hidden  mobile:bottom-0">
+                    <ButtonWa />
+                  </div>
                 </div>
               </div>
             </div>
-            <SpekSingkat props={myData} datas={myData} />
-            <hr />
-            <div className="py-4 px-4">
-              <h1 className="font-medium text-black/70">Deskripsi</h1>
-              <h2 className="font-medium mt-2 text-sm text-black/80">
-                {myData.deskripsi}
-              </h2>
-            </div>
-            {/* <ButtonWa /> */}
+          </div>
+          <div className="mobile:sticky desktop:hidden mobile:bottom-0">
+            <ButtonWa />
           </div>
         </div>
       </div>
