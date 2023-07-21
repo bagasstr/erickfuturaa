@@ -59,7 +59,7 @@ const PreviewImage = ({ props }) => {
               </div>
             ))}
           </Swiper>
-          <div className="absolute bottom-24 left-0 right-0 desktop:w-[500px] desktop:mx-auto">
+          <div className="absolute bottom-20 left-0 right-0 desktop:w-[500px] desktop:mx-auto">
             <ButtonWa />
           </div>
         </div>
