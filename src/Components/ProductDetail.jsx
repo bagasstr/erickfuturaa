@@ -80,7 +80,7 @@ const ProductDetail = () => {
                 </div>
               </PhotoProvider>
             </div>
-            <hr className="mt-10 bg-primary/10 h-[2px]" />
+            <hr className="mt-10 mobile:hidden bg-primary/10 h-[2px]" />
 
             <div className="desktop:flex desktop:gap-x-7 desktop:justify-between">
               <div className="">
