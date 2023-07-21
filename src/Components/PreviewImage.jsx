@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { data } from "../Data/ListingTerbaru/DataTerbaru.json";
 // Import Swiper React components
 import { Pagination, Scrollbar } from "swiper/modules";
@@ -10,6 +10,7 @@ import "swiper/css";
 
 import "swiper/css/pagination";
 import ButtonWa from "./ButtonWa";
+import Navbar from "./Navbar";
 
 const PreviewImage = ({ props }) => {
   const { title } = useParams();
@@ -18,20 +19,23 @@ const PreviewImage = ({ props }) => {
 
   return (
     <>
-      <div className="fixed pt-[4.2rem] top-0 right-0 bg-black w-screen h-screen z-50">
-        <div className="flex items-center justify-between px-3 py-5">
+      <Navbar hidden={"hidden"} />
+      <div
+        id="imagePreview"
+        className="fixed top-0 right-0 bg-black w-screen h-screen z-[99] image-preview"
+      >
+        <div className="flex items-center justify-around mobile:justify-between mobile:px-4 py-5">
           <div className="">
             <h1 className="text-white/90 text-sm font-medium">
               {myData.title}
             </h1>
             <h1 className="text-white/90 text-sm font-medium">{myData.area}</h1>
           </div>
-          <AiOutlineCloseCircle
-            onClick={() => props((prev) => !prev)}
-            className="text-4xl rounded-full shadow-lg text-white "
-          />
+          <Link to={`/listings/detail/${myData.title}`} className="">
+            <AiOutlineCloseCircle className="text-4xl rounded-full shadow-lg text-white " />
+          </Link>
         </div>
-        <div className="absolute z-50">
+        <div className="absolute bottom-3 right-0 left-0 desktop:w-[500px] desktop:mx-auto  z-50">
           <ButtonWa />
         </div>
         <div className="">
@@ -49,8 +53,7 @@ const PreviewImage = ({ props }) => {
                       <img
                         src={res}
                         alt=""
-                        onClick={() => setPreview((prev) => !prev)}
-                        className="w-full h-[500px] object-cover cursor-pointer"
+                        className="w-full h-[520px] mobile:object-cover desktop:object-contain cursor-pointer"
                       />
                     </div>
                   </div>

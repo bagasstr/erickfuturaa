@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { data } from "../Data/ListingTerbaru/DataTerbaru.json";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
@@ -41,31 +41,34 @@ const ProductDetail = () => {
                 <div key={idx} className="">
                   <SwiperSlide>
                     <div className="">
-                      <div className="">
+                      <Link
+                        to={`/listings/detail/${myData.title}/previewImage`}
+                        className=""
+                      >
                         <img
                           src={res}
                           alt=""
-                          onClick={() => setPreview((prev) => !prev)}
                           className="w-[500px] h-[300px] object-cover cursor-pointer"
                         />
-                      </div>
+                      </Link>
                     </div>
                   </SwiperSlide>
                 </div>
               ))}
             </Swiper>
-            {preview ? <PreviewImage props={setPreview} /> : null}
             <div className="mobile:hidden ">
               <PhotoProvider>
                 <div className="desktop:flex desktop:gap-x-4 desktop:items-center desktop:flex-col">
-                  <div className="desktop:mb-10">
+                  <Link
+                    to={`/listings/detail/${myData.title}/previewImage`}
+                    className="desktop:mb-10"
+                  >
                     <img
                       src={mainImage}
-                      onClick={() => setPreview((prev) => !prev)}
                       className="w-[300px] h-[400px] rounded-md"
                       alt=""
                     />
-                  </div>
+                  </Link>
                   <div className="flex gap-x-5">
                     {myData.image.map((item, index) => (
                       <img

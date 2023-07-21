@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 import { BsFillHousesFill } from "react-icons/bs";
 
-const Navbar = ({ primary, white }) => {
+const Navbar = ({ primary, white, hidden }) => {
   const [menu, setMenu] = useState(false);
   const [colorChange, setColorchange] = useState(false);
   const changeNavbarColor = () => {
@@ -18,7 +18,7 @@ const Navbar = ({ primary, white }) => {
   return (
     <>
       <div
-        className={`w-full fixed top-0 left-0 z-[99] ${
+        className={`w-full fixed top-0 left-0 z-[99] ${hidden} ${
           colorChange
             ? `bg-white shadow-md ${white}`
             : `bg-transparent ${primary}`
