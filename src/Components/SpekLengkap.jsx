@@ -10,13 +10,13 @@ const SpekLengkap = ({ props }) => {
   return (
     <div className="fixed overflow-y-scroll z-50 bottom-0 left-0 w-full bg-slate-200 h-screen">
       <div className="px-8 py-8">
-        <div className="flex fixed w-full justify-between">
+        <div className="flex fixed w-full top-6 justify-between">
           <h1 className="font-semibold text-lg text-black/80">Deskripsi</h1>
-          <Link to={`/listings/detail/${myData.title}`} className="mr-20">
+          <Link to={`/listings/detail/${myData.title}`} className="mr-16">
             <AiFillCloseCircle className="text-3xl" />
           </Link>
         </div>
-        <div className="mt-16">
+        <div className="pt-24">
           <div className="flex justify-between items-center border-t-2 border-black/20">
             <h1 className="py-4 font-medium text-sm text-black/70">
               Kamar Tidur

@@ -5,6 +5,7 @@ import AllProduct from "../Pages/AllProduct";
 import ProductDetail from "../Components/ProductDetail";
 import PreviewImage from "../Components/PreviewImage";
 import SpekLengkap from "../Components/SpekLengkap";
+import Profile from "../Pages/Profile";
 
 const Routers = () => {
   return (
@@ -20,6 +21,7 @@ const Routers = () => {
         element={<SpekLengkap />}
       />
       <Route path="/all-listings" element={<AllProduct />} />
+      <Route path="/profile" element={<Profile />} />
     </Routes>
   );
 };

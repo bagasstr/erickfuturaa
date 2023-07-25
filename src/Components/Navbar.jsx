@@ -63,7 +63,7 @@ const Navbar = ({ primary, white, hidden }) => {
                   <li>Product</li>
                 </Link>
                 <Link
-                  to={"/profile-me"}
+                  to={"/profile"}
                   onClick={() => setMenu((prev) => !menu)}
                   className="font-medium text-lg  mobile:text-white hover:text-primary/75"
                 >
