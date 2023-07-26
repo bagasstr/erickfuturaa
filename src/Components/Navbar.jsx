@@ -70,7 +70,7 @@ const Navbar = ({ primary, white, hidden }) => {
                   <li>Profile</li>
                 </Link>
                 <Link
-                  to={"/contact-us"}
+                  to={"/contact"}
                   onClick={() => setMenu((prev) => !menu)}
                   className="font-medium text-lg  mobile:text-white hover:text-primary/75"
                 >

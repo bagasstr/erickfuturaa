@@ -6,6 +6,7 @@ import ProductDetail from "../Components/ProductDetail";
 import PreviewImage from "../Components/PreviewImage";
 import SpekLengkap from "../Components/SpekLengkap";
 import Profile from "../Pages/Profile";
+import Contact from "../Pages/Contact";
 
 const Routers = () => {
   return (
@@ -22,6 +23,7 @@ const Routers = () => {
       />
       <Route path="/all-listings" element={<AllProduct />} />
       <Route path="/profile" element={<Profile />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   );
 };

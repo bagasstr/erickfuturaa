@@ -14,7 +14,6 @@ const HomePage = () => {
       <Filter />
       <Product />
       {/* <Produk /> */}
-      <Contact />
       <Footer />
     </div>
   );
