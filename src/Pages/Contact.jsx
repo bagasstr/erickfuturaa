@@ -1,10 +1,12 @@
 import React from "react";
 import { BsFillTelephoneFill, BsFillBuildingFill } from "react-icons/bs";
 import { AiFillMail } from "react-icons/ai";
+import Navbar from "../Components/Navbar";
 
 const Contact = () => {
   return (
-    <div>
+    <>
+      <Navbar />
       <div className="grid desktop:pr-7 desktop:grid-cols-2 desktop:items-center justify-between">
         <div className="desktop:h-[664px] mobile:h-screen mobile:w-full">
           <img
@@ -49,7 +51,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
