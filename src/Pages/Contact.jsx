@@ -6,7 +6,7 @@ import Navbar from "../Components/Navbar";
 const Contact = () => {
   return (
     <>
-      <Navbar />
+      <Navbar primary={"text-white"} white={"text-primary"} />
       <div className="grid desktop:pr-7 desktop:grid-cols-2 desktop:items-center justify-between">
         <div className="desktop:h-[664px] mobile:h-screen mobile:w-full">
           <img
