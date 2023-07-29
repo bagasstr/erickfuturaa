@@ -8,7 +8,7 @@ const Contact = () => {
     <>
       <Navbar
         primary={"text-white"}
-        bg={"bg-black/40"}
+        bg={"desktop:bg-black/40 mobile:bg-transparant"}
         white={"text-primary"}
       />
       <div className="grid desktop:pr-7 desktop:grid-cols-2 bg-white desktop:items-center justify-between">
