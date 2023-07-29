@@ -40,7 +40,9 @@ const Navbar = ({ primary, white, hidden, bg }) => {
             </div>
             <div className="flex items-center flex-row-reverse justify-center">
               <FiMenu
-                className="ml-8 font-bold  text-2xl desktop:hidden hover:text-primary/75"
+                className={`ml-8 font-bold text-2xl desktop:hidden hover:text-primary/75 ${
+                  colorChange ? { primary } : { white }
+                }`}
                 onClick={() => setMenu((prev) => !prev)}
               />
               <ul
