@@ -97,7 +97,7 @@ const AllProduct = ({ props }) => {
                         Detail Unit
                       </Link>
                       <a
-                        href=""
+                        href={`https://wa.me/+6285156490481?text=Saya ingin beli property ini ${res.title}`}
                         className="bg-text text-white px-4 py-3 desktop:py-[.80rem] desktop:px-[1rem] uppercase rounded-md desktop:text-sm font-semibold flex items-center shadow-md"
                       >
                         WhatsApp
