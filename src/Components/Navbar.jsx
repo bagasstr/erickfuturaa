@@ -26,7 +26,9 @@ const Navbar = ({ primary, white, hidden, bg }) => {
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-x-2">
               <BsFillHousesFill
-                className={`  text-lg ${colorChange ? { primary } : { white }}`}
+                className={`mobile:text-xl desktop:text-lg ${
+                  colorChange ? { primary } : { white }
+                }`}
               />
               <h1
                 className={`font-semibold  text-2xl ${
