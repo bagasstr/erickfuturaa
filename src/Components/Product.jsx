@@ -12,7 +12,9 @@ const Product = () => {
   const [primary, setPrimary] = useState([]);
 
   useEffect(() => {
-    const filterd = data.filter((produk) => produk.typeProperty === "primary");
+    const filterd = data.filter(
+      (produk) => produk.typeProperty === produk.typeProperty
+    );
     setSecondary(filterd);
   }, []);
   const pesan = `https://wa.me/+6285156490481?text=Saya ingin beli property ini ${secondary.title}`;
