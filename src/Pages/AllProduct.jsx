@@ -36,9 +36,12 @@ const AllProduct = ({ props }) => {
         white={"text-primary"}
       />
       <div className="w-full">
-        <div className="containers px-2 py-16 pt-20">
+        <div className="containers px-2 mobile:pt-24 desktop:pt-40">
           {/* Listingan Terbaru */}
           <div className="ListinganTerbaru">
+            <h1 className="desktop:font-bold text-black/80 desktop:text-3xl mobile:font-bold mobile:text-2xl">
+              Semua Listingan
+            </h1>
             <div className="mobile:grid-cols-1 desktop:justify-items-center grid desktop:grid-cols-3 mobile:items-center">
               {filteredProducts.map((res, index) => (
                 <div
