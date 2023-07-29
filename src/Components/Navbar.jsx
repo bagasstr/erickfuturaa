@@ -46,8 +46,8 @@ const Navbar = ({ primary, white, hidden, bg }) => {
                 onClick={() => setMenu((prev) => !prev)}
               />
               <ul
-                className={`desktop:flex desktop:items-center desktop:gap-x-11 mobile:absolute mobile:transition-all mobile:bg-secc mobile:p-4 mobile:rounded-lg mobile:w-full mobile:left-0 mobile:shadow-lg mobile:space-y-3 ${
-                  menu ? "top-[4rem]" : "top-[-15rem]"
+                className={`desktop:flex desktop:items-center desktop:gap-x-11 mobile:absolute mobile:transition-all  mobile:p-4 mobile:rounded-lg mobile:w-full mobile:left-0 mobile:shadow-lg mobile:space-y-3 ${
+                  menu ? "top-[4rem] mobile:bg-secc" : "top-[-15rem]"
                 }`}
               >
                 <Link
