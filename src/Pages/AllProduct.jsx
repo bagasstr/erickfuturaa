@@ -29,7 +29,11 @@ const AllProduct = ({ props }) => {
   // console.log(filteredProducts);
   return (
     <div>
-      <Navbar primary={"text-black/80"} white={"text-primary"} />
+      <Navbar
+        primary={"text-primary"}
+        bg={"bg-transparant"}
+        white={"text-black"}
+      />
       <div className="w-full">
         <div className="containers px-2 py-16 pt-20">
           {/* Listingan Terbaru */}
@@ -97,7 +101,7 @@ const AllProduct = ({ props }) => {
                         Detail Unit
                       </Link>
                       <a
-                        href={`https://wa.me/+6285156490481?text=Saya ingin beli property ini ${res.title}`}
+                        href={`https://wa.me/+62xxxxxxxxx?text=Saya ingin beli property ini ${res.title}`}
                         className="bg-text text-white px-4 py-3 desktop:py-[.80rem] desktop:px-[1rem] uppercase rounded-md desktop:text-sm font-semibold flex items-center shadow-md"
                       >
                         WhatsApp

@@ -2,7 +2,7 @@ import React from "react";
 import { BsWhatsapp } from "react-icons/bs";
 
 const ButtonWa = ({ pesanwa }) => {
-  const pesan = `https://wa.me/+6285156490481?text=Saya ingin beli property ini ${pesanwa}`;
+  const pesan = `https://wa.me/+62xxxxxxxxx?text=Saya ingin beli property ini ${pesanwa}`;
   return (
     <div className="mobile:sticky mobile:bottom-0 w-full mobile:mt-4 desktop:mt-4">
       <a

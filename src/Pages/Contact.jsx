@@ -6,8 +6,12 @@ import Navbar from "../Components/Navbar";
 const Contact = () => {
   return (
     <>
-      <Navbar primary={"text-white"} white={"text-primary"} />
-      <div className="grid desktop:pr-7 desktop:grid-cols-2 desktop:items-center justify-between">
+      <Navbar
+        primary={"text-white"}
+        bg={"bg-black/40"}
+        white={"text-primary"}
+      />
+      <div className="grid desktop:pr-7 desktop:grid-cols-2 bg-white desktop:items-center justify-between">
         <div className="desktop:h-[664px] mobile:h-screen mobile:w-full">
           <img
             src="/hero.jpg"
