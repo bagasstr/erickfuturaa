@@ -18,7 +18,7 @@ const Product = () => {
     setSecondary(filterd);
   }, []);
   const pesan = `https://wa.me/+6285156490481?text=Saya ingin beli property ini ${secondary.title}`;
-  console.log(secondary);
+  // console.log(secondary);
   return (
     <div>
       <div className="w-full">

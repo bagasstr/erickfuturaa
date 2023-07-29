@@ -13,7 +13,6 @@ import ButtonWa from "./ButtonWa";
 import Navbar from "./Navbar";
 
 const PreviewImage = ({ props }) => {
-  const [jmlImg, setJmlImg] = useState();
   const { title } = useParams();
   const myData = data.find((data) => data.title === String(title));
 
@@ -23,9 +22,8 @@ const PreviewImage = ({ props }) => {
     (item) =>
       item.endsWith(".jpeg") || item.endsWith(".png") || item.endsWith(".jpg")
   ).length;
-  // setJmlImg(totalImages);
 
-  console.log(totalImages);
+  // console.log(totalImages);
   return (
     <>
       <Navbar hidden={"hidden"} />
