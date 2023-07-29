@@ -150,14 +150,14 @@ const ProductDetail = () => {
                     </div>
                   </div>
                   <div className="mobile:sticky mobile:hidden  mobile:bottom-0">
-                    <ButtonWa />
+                    <ButtonWa pesanwa={myData.title} />
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div className="mobile:sticky desktop:hidden mobile:bottom-2">
-            <ButtonWa />
+            <ButtonWa pesanwa={myData.title} />
           </div>
         </div>
       </div>

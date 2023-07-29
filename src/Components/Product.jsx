@@ -7,16 +7,15 @@ import { Link, useParams, useSearchParams } from "react-router-dom";
 import ProductDetail from "./ProductDetail";
 
 const Product = () => {
+  const { typeProperty, area } = useParams();
   const [secondary, setSecondary] = useState([]);
   const [primary, setPrimary] = useState([]);
 
   useEffect(() => {
-    const filterd = data.filter(
-      (produk) => produk.typeProperty === "secondary"
-    );
+    const filterd = data.filter((produk) => produk.typeProperty === "primary");
     setSecondary(filterd);
   }, []);
-  // console.log(secondary);
+  console.log(secondary);
   return (
     <div>
       <div className="w-full">
