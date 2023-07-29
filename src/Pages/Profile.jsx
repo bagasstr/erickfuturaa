@@ -1,6 +1,7 @@
 import React from "react";
 import { MdWork, MdLocationOn } from "react-icons/md";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 const Profile = () => {
   return (
@@ -44,6 +45,7 @@ const Profile = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

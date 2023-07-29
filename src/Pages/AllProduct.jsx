@@ -6,6 +6,7 @@ import { FaBath, FaBed, FaLocationDot } from "react-icons/fa6";
 import { GiResize } from "react-icons/gi";
 import { BsFillBuildingFill } from "react-icons/bs";
 import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 
 const AllProduct = ({ props }) => {
   const location = useLocation();
@@ -30,9 +31,9 @@ const AllProduct = ({ props }) => {
   return (
     <div>
       <Navbar
-        primary={"text-primary"}
+        primary={"text-black/80"}
         bg={"bg-transparant"}
-        white={"text-black"}
+        white={"text-primary"}
       />
       <div className="w-full">
         <div className="containers px-2 py-16 pt-20">
@@ -114,6 +115,7 @@ const AllProduct = ({ props }) => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
