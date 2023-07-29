@@ -19,7 +19,7 @@ const Navbar = ({ primary, white, hidden, bg }) => {
     <>
       <div
         className={`w-full fixed top-0 left-0 z-[99] ${hidden} ${
-          colorChange ? `bg-white shadow-md ${white}` : `${bg} ${primary}`
+          colorChange ? `bg-white shadow-md ${primary}` : `${white} ${bg}`
         }`}
       >
         <div className="max-w-[1024px] mx-auto py-5 mobile:px-4">
@@ -40,46 +40,46 @@ const Navbar = ({ primary, white, hidden, bg }) => {
             </div>
             <div className="flex items-center flex-row-reverse justify-center">
               <FiMenu
-                className={`ml-8 font-bold text-2xl desktop:hidden hover:text-primary/75 ${
-                  colorChange ? { primary } : { white }
+                className={`ml-8 font-bold text-2xl desktop:hidden ${
+                  colorChange ? "text-primary" : "text-white"
                 }`}
                 onClick={() => setMenu((prev) => !prev)}
               />
-              <ul
-                className={`desktop:flex desktop:items-center desktop:gap-x-11 mobile:absolute mobile:transition-all  mobile:p-4 mobile:rounded-lg mobile:w-full mobile:left-0 mobile:shadow-lg mobile:space-y-3 ${
-                  menu ? "top-[4rem] mobile:bg-secc" : "top-[-15rem]"
-                }`}
-              >
-                <Link
-                  to={"/"}
-                  onClick={() => setMenu((prev) => !menu)}
-                  className="font-medium text-lg  mobile:text-white hover:text-primary/75"
-                >
-                  <li>Home</li>
-                </Link>
-                <Link
-                  to={"/all-listings"}
-                  onClick={() => setMenu((prev) => !menu)}
-                  className="font-medium text-lg  mobile:text-white hover:text-primary/75"
-                >
-                  <li>Product</li>
-                </Link>
-                <Link
-                  to={"/profile"}
-                  onClick={() => setMenu((prev) => !menu)}
-                  className="font-medium text-lg  mobile:text-white hover:text-primary/75"
-                >
-                  <li>Profile</li>
-                </Link>
-                <Link
-                  to={"/contact"}
-                  onClick={() => setMenu((prev) => !menu)}
-                  className="font-medium text-lg  mobile:text-white hover:text-primary/75"
-                >
-                  <li>Contact</li>
-                </Link>
-              </ul>
             </div>
+            <ul
+              className={`desktop:flex desktop:items-center desktop:gap-x-11 mobile:absolute mobile:transition-all  mobile:p-4 mobile:rounded-lg mobile:w-full mobile:left-0 mobile:shadow-lg mobile:space-y-3 hover:text-primary ${
+                menu ? "top-[4rem] bg-primary" : "top-[-15rem]"
+              }`}
+            >
+              <Link
+                to={"/"}
+                onClick={() => setMenu((prev) => !menu)}
+                className="font-medium text-lg  mobile:text-white hover:text-primary/75"
+              >
+                <li>Home</li>
+              </Link>
+              <Link
+                to={"/all-listings"}
+                onClick={() => setMenu((prev) => !menu)}
+                className="font-medium text-lg  mobile:text-white hover:text-primary/75"
+              >
+                <li>Product</li>
+              </Link>
+              <Link
+                to={"/profile"}
+                onClick={() => setMenu((prev) => !menu)}
+                className="font-medium text-lg  mobile:text-white hover:text-primary/75"
+              >
+                <li>Profile</li>
+              </Link>
+              <Link
+                to={"/contact"}
+                onClick={() => setMenu((prev) => !menu)}
+                className="font-medium text-lg  mobile:text-white hover:text-primary/75"
+              >
+                <li>Contact</li>
+              </Link>
+            </ul>
           </div>
         </div>
       </div>

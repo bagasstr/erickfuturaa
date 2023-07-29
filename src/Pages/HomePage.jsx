@@ -9,7 +9,11 @@ import Navbar from "../Components/Navbar";
 const HomePage = () => {
   return (
     <div>
-      <Navbar primary={"text-white"} bg={"text-white"} white={"text-primary"} />
+      <Navbar
+        primary={"text-primary"}
+        bg={"text-white"}
+        white={"text-primary"}
+      />
       <Hero />
       <Filter />
       <Product />
