@@ -47,7 +47,7 @@ const Navbar = ({ primary, white, hidden, bg }) => {
               />
             </div>
             <ul
-              className={`desktop:flex desktop:items-center desktop:gap-x-11 mobile:absolute mobile:transition-all  mobile:p-4 mobile:rounded-lg mobile:w-full mobile:left-0 mobile:shadow-lg mobile:space-y-3 hover:text-primary ${
+              className={`desktop:flex desktop:items-center desktop:gap-x-11 mobile:absolute mobile:transition-all  mobile:p-4 mobile:rounded-lg mobile:w-full mobile:left-0 mobile:shadow-lg mobile:space-y-3  ${
                 menu ? "top-[4rem] bg-primary" : "top-[-15rem]"
               }`}
             >

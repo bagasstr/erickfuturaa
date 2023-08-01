@@ -7,6 +7,7 @@ import { GiResize } from "react-icons/gi";
 import { BsFillBuildingFill } from "react-icons/bs";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import { Helmet } from "react-helmet-async";
 
 const AllProduct = ({ props }) => {
   const location = useLocation();
@@ -30,6 +31,11 @@ const AllProduct = ({ props }) => {
   // console.log(filteredProducts);
   return (
     <div>
+      <Helmet>
+        <title>erick futura</title>
+        <meta name="description" content="semua produk" />
+        <link rel="canonical" href="/Pages" />
+      </Helmet>
       <Navbar
         primary={"text-black/80"}
         bg={"bg-transparant"}

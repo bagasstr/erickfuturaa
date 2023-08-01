@@ -5,6 +5,7 @@ import Product from "../Components/Product";
 import Contact from "../Components/Contact";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
+import { Helmet } from "react-helmet-async";
 
 const HomePage = () => {
   return (
