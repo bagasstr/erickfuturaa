@@ -34,7 +34,7 @@ const AllProduct = ({ props }) => {
       <Helmet>
         <title>erick futura</title>
         <meta name="description" content="semua produk" />
-        <link rel="canonical" href="/Pages" />
+        <link rel="canonical" href="/AllProduct" />
       </Helmet>
       <Navbar
         primary={"text-black/80"}

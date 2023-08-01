@@ -2,10 +2,16 @@ import React from "react";
 import { MdWork, MdLocationOn } from "react-icons/md";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import { Helmet } from "react-helmet-async";
 
 const Profile = () => {
   return (
     <>
+      <Helmet>
+        <title>erick futura</title>
+        <meta name="description" content="profile saya" />
+        <link rel="canonical" href="/Profile" />
+      </Helmet>
       <Navbar primary={"text-white"} bg={"text-white"} white={"text-primary"} />
       <div className="h-[50rem]">
         <img
